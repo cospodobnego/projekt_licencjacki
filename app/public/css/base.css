@@ -1,6 +1,6 @@
 nav {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-
+    font-family: "Poppins", sans-serif;
 }
 nav ul{
     list-style: none;
@@ -12,7 +12,7 @@ nav ul{
 
 }
 nav ul li {
-    width: 25%;
+    width: 20%;
 
 }
 nav ul li a{
@@ -34,4 +34,8 @@ nav ul li a:hover{
     transition: all 0.5s ease;
     color: white;
 
+}
+.quiz{
+    width: 10vw;
+    margin: 0 auto;
 }

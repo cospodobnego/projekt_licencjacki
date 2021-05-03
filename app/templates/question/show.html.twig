@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="quiz">
+{#        {% if question is defined and question|length %}#}
+        <dl class="dl-horizontal">
+            {% for question in question %}
+            <h1>{{ 'Question'|trans }}<p>{{ question.content }}</p></h1>
+                <h2>{{ 'Answer'|trans }}</h2> <form>
+                {% for questionPossibleAnswer in question.questionPossibleAnswer %}
+
+
+               <input type="radio" name="{{ questionPossibleAnswer.question.id }}">
+                    <label>{{ questionPossibleAnswer.content }}</label>
+
+            {% endfor %}
+            </form>
+            {% endfor %}
+{#{% endif %}#}
+{#            {% for questionpossibeanswer is defined and comment|length %}#}
+{#            <dd>#}
+{#                    {{ question.questionpossibleanswear.content }}</dd>#}
+
+{#        {{ form_start(form, {method: 'POST', action: url('question', {id: question.id}) }) }}#}
+{#        {{ form_widget(form) }}#}
+        </dl>
+ <div>
+     <input type="submit" name="submit">
+ </div>
+{#    {{ form_end(form) }}#}
+    </div>
+{% endblock %}

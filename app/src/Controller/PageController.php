@@ -6,28 +6,29 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Class RedirectToRouteController.
+ * Class PageController.
  *
- * @Route("/")
  */
 class PageController extends AbstractController
 {
     /**
      * Index action.
      *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse RedirectResponse
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
      *     "/",
-     *     name="main_page"
+     *     name="page",
      * )
      */
-    public function index(): RedirectResponse
+
+
+    public function page(): Response
     {
-        return $this->redirectToRoute('index.html.twig');
+        return $this->render('index.html.twig');
     }
 }

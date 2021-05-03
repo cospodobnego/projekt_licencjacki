@@ -1,6 +1,119 @@
+body
+{
+
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    margin: 0;
+    background: white;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    float: left;
+    display: flex;
+   margin:  -168.5px 0px 0px -1px;
+
+
+}
+.anim
+{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateX(-48px);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateX(-26px);
+    }
+
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateX(-13px);
+    }
+
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateX(-6.5px);
+    }
+
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateX(-4px);
+    }
+
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+        animation-timing-function: ease-out;
+        transform: translateX(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.title h1{
+    letter-spacing: 0.1rem;
+    font-size: 22px;
+    text-align: center;
+    display: flex;
+    padding: 1.8em 0 0;
+    align-items: center;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    color: black;
+
+}
+h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    padding: 0.1em 0 0.7em;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    color: #B65E42;
+}
+
+ nav h1 {
+
+
+    letter-spacing: 0.2rem;
+    font-size: 18px;
+     text-transform: uppercase;
+     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 3vh;
+    position: relative;
+    padding: 0 1em;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+}
 nav {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
     font-family: "Poppins", sans-serif;
+
+
 }
 nav ul{
     list-style: none;
@@ -17,22 +130,25 @@ nav ul li {
 }
 nav ul li a{
     text-decoration: none;
-    color: black;
+    color: #000;
     font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     display: block;
     padding: 1rem 0;
-    background-color: whitesmoke;
+    background-color: white;
     text-align: center;
     transition: all 0.5s ease;
 
 }
+a:hover{
+    text-decoration: none;
+}
 nav ul li a:hover{
-    background-color: rgba(226, 35, 125, 0.99);
+    background-color: #f2b28d;
     font-weight: bold;
     transition: all 0.5s ease;
-    color: white;
+    color: #B65E42;
+
 
 }
 .quiz{

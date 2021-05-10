@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ce01bab2aa.js"></script>
+{% endblock %}
+{% block body %}
+    <img class="ux" id="uxdef" src="{{ asset('images/mainpage.jpeg') }}" alt="zdjęcie ozdobne"/>
+
+    <div class="main">
+    <h1 class="artictletitle">UX Design - objaśnienie terminu </h1>
+
+        <h2 class="untitle">Czym jest UX Design?</h2>
+
+    <div class="article">User Experience Design (w skrócie UX/UXD), to projektowanie doświadczeń użytkownika, dbanie o to, aby produkt wzbudzał pozytywne emocje w osobach, które z niego korzystają̨. Tego terminu używa się w odniesieniu do różnych tworów, takich jak:
+
+        <ol class="list">
+        <li>strony internetowe,</li>
+        <li>aplikacje mobilne/desktopowe,</li>
+        <li>produkty fizyczne,</li>
+        <li>usługi.</li>
+    </ol>
+    </div>
+
+    <h2 class="untitle">Dlaczego UX Design jest tak ważny?</h2>
+<div class="article"> Każdy użytkownik oczekuje technologii, która jest łatwa w obsłudze i spełnia swoją rolę. UX Design skoncentrowany jest na ludziach, a to oni decydują o sukcesie aplikacji lub strony internetowej. Jakość doświadczeń użytkownika podczas interakcji z produktem jest kluczowa.
+
+    UX Design uwzględnia potrzeby użytkowników na wszystkich etapach projektowania. Projektanci UX wykorzystują specjalne badania oraz testy. Wszystko po to, by określić, czego oczekują użytkownicy (cech, funkcji, walorów estetycznych).
+</div>
+
+   <h2 class="untitle">Czym zajmują się UX designerzy?</h2>
+<div class="article">
+    UX designerzy są odpowiedzialni za przyjazność i dostępność tworzonych produktów, usług i technologii.
+
+    Projektant UX nie ma gotowego przepisu, jak sprawić, by użytkownicy byli zadowoleni. Jednak można wyszczególnić działania, które są stałe, by do tego celu dążyć.
+
+    Kilka powszechnych działań UX designerów:
+    <ol class="list">
+        <li>poprawa istniejącego systemu,</li>
+        <li>testy AB,</li>
+        <li>prototypowanie,</li>
+        <li>ankiety,</li>
+        <li>wireframing,</li>
+        <li>mapa przejść użytkownika (user flow),</li>
+        <li>wzorce projektowe,</li>
+        <li>persony.</li>
+
+    </ol>
+
+</div>
+
+
+   <h2 class="untitle">UX a UI</h2>
+<div class="article">
+    Projektowanie UX jest powiązane z projektowaniem UI, ale różni się od niego.
+    UI (User Interface) skupia się na tym, jak produkt wygląda i działa, bez szczególnego uwzględniania preferencji użytkownika. Projektant UI stosuje wiedzę z zakresu estetyki do elementów wizualnych produktu, takich jak:
+    <ol class="list">
+        <li>animacje,</li>
+        <li>przyciski,</li>
+        <li>pola wyboru,</li>
+        <li>paleta kolorów,</li>
+        <li>diagramy,</li>
+        <li>obrazy,</li>
+        <li>typografia,</li>
+        <li>widżety.</li>
+
+    </ol>
+    Projektant UX stosuje wiedzę o tym, czego chcą i potrzebują użytkownicy, do działań i funkcji produktu. Współpraca projektantów UX i UI ostatecznie tworzy najlepszy możliwy produkt poprzez połączenie formy i funkcji.
+</div>
+
+    </div>
+{% endblock %}

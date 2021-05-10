@@ -6,8 +6,6 @@
 namespace App\Controller;
 
 
-use App\Entity\Question;
-use App\Form\QuestionType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,9 +23,9 @@ class QuestionController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/question",
+     *     "/quiz",
      *     methods={"GET","POST"},
-     *     name="question",
+     *     name="quiz",
      *
      * )
      */
@@ -37,21 +35,45 @@ class QuestionController extends AbstractController
         $question = $this->getDoctrine()
             ->getRepository('App:Question')
             ->findAll();
-//        $form = $this->createForm(QuestionType::class, $question, ['method'=>'POST']);
-//        $form->handleRequest($request);
-//        return $this->render(
-//            'question/show.html.twig',
-//            ['form' =>$form->createView(),
-//                'question'=>$question]
-//
-//        );
+
         return $this->render(
 
-//            'question/show.html.twig',
-//            ['question' => $question]
             'question/show.html.twig',
             array('question' => $question)
         );
 
+    }
+    /**
+     * Score action.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @param Request $request
+     * @return Response
+     * @Route(
+     *     "/sendQuiz",
+     *     name="sendQuiz",
+     *     methods={"GET","POST"},
+     * )
+     */
+    public function sendQuiz(Request $request):Response
+    {
+    $counter = 0;
+    $data_form = implode(",", $request->request->all());
+    $data = explode(",",$data_form);
+    $length = count($data);
+
+    for ($i=0; $i < $length; $i++) {
+        if($data[$i] == '1')
+       {
+           $counter++;
+       }
+
+    }
+
+        return $this->render(
+
+            'question/score.html.twig',
+            ['counter' => $counter]
+        );
     }
 }

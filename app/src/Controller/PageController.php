@@ -31,4 +31,22 @@ class PageController extends AbstractController
     {
         return $this->render('index.html.twig');
     }
+
+    /**
+     * Homepage action.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/homepage",
+     *     name="homepage",
+     * )
+     */
+
+
+    public function homePage(): Response
+    {
+        return $this->render('/page/homepage.html.twig');
+    }
+
 }

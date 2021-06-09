@@ -1,0 +1,132 @@
+.about{
+    padding: 2em 2em 2em 2em;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.sources{
+    padding: 2em 5.5em 2em 5.5em;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+p{
+    margin-bottom: 0;
+}
+.photo{
+
+    width: 40%;
+    transition: all 0.3s ease-in-out;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 1em;
+   ;
+}
+.photo:hover{
+    transform: scale(0.95);
+    opacity: 0.7;
+}
+.h1{
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    background: url(../images/info.png) no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    position: relative;
+    padding: 2em 2em;
+    font-size: 60px;
+    letter-spacing: 1.5rem;
+    color: #503e3e;
+
+
+}
+.h1:hover{
+
+    opacity: 0.7;
+}
+.aboutcontent{
+    padding: 1em;
+    width: 50%;
+}
+
+
+h2, h3, h4{
+   text-align: center;
+    padding-top: 1em;
+    font-family: "Lato", sans-serif;
+}
+
+.sources ul {
+    list-style: none;
+    padding: 0.2rem 0 0 0;
+    text-align: center;
+
+}
+.sources ul li a{
+    text-decoration: none;
+    color: #B65E42
+
+}
+.sources ul li a:visited{
+    color: #801f1f;
+}
+.sources li a:hover{
+
+
+    text-decoration: none;
+    color: black;
+}
+@media (min-width: 690px) and (max-width: 1000px) {
+    .h1{
+        text-align: right;
+        padding: 1em 1em;
+        font-size: 40px;
+        letter-spacing: 1.2rem;
+    }
+}
+@media (min-width: 500px) and (max-width: 689px) {
+    .h1{
+        text-align: right;
+        padding: 0 0 0 6em;
+        font-size: 30px;
+        letter-spacing: 0.5rem;
+
+    }
+}
+
+@media (max-width: 499px){
+    .h1 {
+        text-align: center;
+        padding: 0 0em 7em 0em;
+        font-size: 15px;
+        letter-spacing: 0.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .about {
+        flex-direction: column;
+    }
+    .photo {
+        width: 100%;
+    }
+
+    .aboutcontent {
+        padding: 0;
+        width: 100%;
+    }
+
+}

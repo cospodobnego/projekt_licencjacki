@@ -3,39 +3,52 @@
 {% block title %}
 
 {% endblock %}
-
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/quiz.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ce01bab2aa.js"></script>
+{% endblock %}
 {% block body %}
+
     <div class="quiz">
-{#        {% if question is defined and question|length %}#}
 
 
-        <dl class="dl-horizontal">
+
+
             {% for question in question %}
 
                 {% if question.id==1 %}
-               <h1>{{ question.quiz.name }}</h1>
+               <h1 class="quizname">{{ question.quiz.name }}</h1>
                 {% endif %}
-           <h1>{{ 'Question'|trans }}</h1> <p>{{ question.content }}</p>
-               <h2>{{ 'Answer'|trans }}</h2>
+           <h1 class="pytanie">{{ 'Pytanie ' }}{{ question.id }}</h1> <h2>{{ question.content }}</h2>
 
-            <form method="post" action="{{ url('sendQuiz') }}">
+
+            <form  method="post" action="{{ url('sendQuiz') }}">
 
                 {% for questionPossibleAnswer in question.questionPossibleAnswer %}
+<div >
+                <label class="rad-label"  for="{{ questionPossibleAnswer.id }}">
+               <input class="rad-input"  id="{{ questionPossibleAnswer.id }}" type="radio" value="{{ questionPossibleAnswer.isCorrect }}" name="{{ questionPossibleAnswer.question.id }}">
+                    <div class="rad-design"></div>
+                    <div class="rad-text">{{ questionPossibleAnswer.content }}</div>
 
-                <label for="{{ questionPossibleAnswer.id }}">
-               <input id="{{ questionPossibleAnswer.id }}" type="radio" value="{{ questionPossibleAnswer.isCorrect }}" name="{{ questionPossibleAnswer.question.id }}">
-                  {{ questionPossibleAnswer.content }}
+
                     </label>
+</div>
             {% endfor %}
 
 
             {% endfor %}
-                <p><input type="submit" value="send"></p>
+                <div class="wrapper"><input type="submit" value="Zakończ"></div>
             </form>
-        </dl>
+
  <div>
 
  </div>
 
     </div>
+
 {% endblock %}

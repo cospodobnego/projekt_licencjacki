@@ -22,14 +22,14 @@ class PageController extends AbstractController
      *
      * @Route(
      *     "/",
-     *     name="page",
+     *     name="/",
      * )
      */
 
 
     public function page(): Response
     {
-        return $this->render('index.html.twig');
+        return $this->render('/page/homepage.html.twig');
     }
 
     /**
@@ -44,9 +44,58 @@ class PageController extends AbstractController
      */
 
 
-    public function homePage(): Response
+    public function homepage(): Response
     {
         return $this->render('/page/homepage.html.twig');
     }
 
+    /**
+     * Aboutpage action.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/about",
+     *     name="about",
+     * )
+     */
+
+
+    public function about(): Response
+    {
+        return $this->render('/page/about.html.twig');
+    }
+    /**
+     * Stagespage action.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/stages",
+     *     name="stages",
+     * )
+     */
+
+
+    public function stages(): Response
+    {
+        return $this->render('/page/stages.html.twig');
+    }
+
+    /**
+     * Accessibilitypage action.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/accessibility",
+     *     name="accessibility",
+     * )
+     */
+
+
+    public function accessibility(): Response
+    {
+        return $this->render('/page/accessibility.html.twig');
+    }
 }

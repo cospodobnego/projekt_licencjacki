@@ -1,0 +1,102 @@
+.h1{
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    background: url(../images/dostepnosc.png) no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    position: relative;
+    padding: 2em 2em;
+    font-size: 60px;
+    letter-spacing: 1.2rem;
+    color: #fcf9f9;
+    text-shadow: 0 0 0.2em #553858, 0 0 0.2em #553858
+}
+.h1:hover{
+    opacity: 0.7;
+}
+.untitle {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    padding: 4em 0 1em;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article{
+padding: 0;
+margin: 0;
+font-size: 20px;
+width: 80%;}
+p{margin-bottom: 0}
+.sectiontwo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0 2em;
+
+}
+.articletwo{
+    padding: 1em;
+    margin: 0;
+    font-size: 20px;
+    width: 50%;
+}
+.center{
+    padding-top: 0.5em;
+    text-align: center;
+}
+.photo{
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20%;
+    padding: 1em;
+;}
+.photo:hover{
+
+    opacity: 0.7;
+}
+.article  a{
+    text-decoration: none;
+    color: #B65E42
+
+}
+.article a:visited{
+    color: #801f1f;
+}
+.article a:hover{
+    text-decoration: none;
+    color: black;
+}
+.accessibility{
+    padding-bottom: 2em;
+}
+@media(max-width: 599px){
+    .sectiontwo{
+       flex-direction: column;
+        align-items: center ;
+        padding: 0;
+    }
+    .articletwo{
+        width: 100%;
+    }
+    .photo{
+        width: 100%;
+    }
+
+}
+@media(max-width: 750px){
+    .h1{
+        letter-spacing: 0;
+        font-size: 30px;
+    }
+}

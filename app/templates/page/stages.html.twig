@@ -1,0 +1,316 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/stages.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ce01bab2aa.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="stages">
+    <h1 class="h1">
+       Proces projektowania
+    </h1>
+        <h3 class="center">Na skróty</h3>
+        <div class="mininavigation">
+
+
+                    <ul class="mininav">
+                        <li><a id="pytanian" href="#pytania">3 pytania</a></li>
+                        <li><a id="podzialn" href="#podzial">Podział strony na obszary</a></li>
+                        <li><a id="mobilnan" href="#mobilna">Wersja mobilna</a></li>
+                        <li><a id="chaosn" href="#chaos">Minimum chaosu</a></li>
+                        <li><a id="konwencjen" href="#konwencje">Dobre praktyki i konwencje</a></li>
+                        <li><a id="przegladanien" href="#przegladanie">Ułatwione przeglądanie</a></li>
+                        <li><a id="formularzen" href="#formularze">Projektowanie formularzy</a></li>
+                        <li><a id="nawigacjan" href="#nawigacja">Nawigacja</a></li>
+                        <li><a id="podstronyn" href="#podstrony">Projektowanie podstron</a></li>
+                        <li><a id="wytycznen" href="#wytyczne">Zbiór wytycznych</a></li>
+                        <li><a id="testyn" href="#testy">Testy zaprojektowanej strony</a></li>
+                    </ul>
+
+
+
+        </div>
+
+    <div class="sectionone">
+    <h2 class="untitle" id="pytania">3 pytania</h2>
+
+    <div class="article">
+    Wg książki Steva Kruga pt. „Nie każ mi myśleć” każda strona internetowa powinna odpowiadać na podstawowe pytania:
+
+        <ul class="nolist">
+        <li>Gdzie jestem?</li>
+        <li>Co tu mogę zrobić?</li>
+        <li>Dokąd mogę pójść?</li>
+
+    </ul>
+
+    </div>
+
+        <h2 class="untitle" id="podzial">Podział strony na obszary</h2>
+        <div class="section">
+            <div class="article"> Użytkownicy odwiedzający stronę powinni bez problemów potrafić wskazać przeznaczenie jej części, np.:
+
+                <ul>
+                    <li>logo,</li>
+                    <li>lupka do powiększania,</li>
+                    <li>opis strony.</li>
+
+                </ul>
+                Dobra architektura informacji jest tak ważna, ponieważ ludzie szybko podejmują decyzje, na których częściach strony należy się skupić, a które można od razu pominąć.
+                <p>Przeprowadzono badania, które polegały na śledzeniu wzroku użytkownika, ich wyniki pokazują, że ludzie prawie nigdy nie interesują się tym obszarem, który wg nich jest potencjalnie nieprzydatny.</p>
+            </div>
+            <img  id="podzialimg"   src="{{ asset('images/podzial.png') }}" alt=""/>
+        </div>
+    </div>
+    <h2 class="untitle" id="mobilna">Wersja mobilna</h2>
+    <div class="sectiontwo">
+        <img class="photo" id="mobile"  src="{{ asset('images/mobilefirst.png') }}" alt=""/>
+        <div class="articletwo">
+<p>
+    Żyjemy w czasach, w których prawie każdy człowiek ma swój własny smartfon. Ludzie spędzają długie godziny przed ekranem telefonu, używają go praktycznie wszędzie.</p>
+            <p>Nie możemy zapomnieć o dostosowaniu naszej aplikacji/strony internetowej do mniejszych ekranów.</p>
+            <p>Przy projektowaniu wiele osób kieruje się zasadą MOBILE FIRST - najpierw projekt strony na smartfon, dopiero później wersja desktopowa.</p>
+        </div>
+    </div>
+    <h2 class="untitle" id="chaos">Minimum chaosu</h2>
+    <div class="section">
+        <div class="article">
+            <p>
+    Najgorsze co może być, to graficzny chaos.
+    Każdy użytkownik ma inna tolerancje na zawiłości i szum wizualny na stronie, dla niektórych jest to bez znaczenia, inni opuszczają przez to witrynę.
+        </p>
+
+        </div>
+    </div>
+<div class="sectionthree">
+
+   <div class="textelem">
+    <p class="bold center">Krzyk</p>
+    <p> Każdy element strony próbuje zwrócić na siebie uwagę odbiorców. Skutkiem jest efekt przytłoczenia: dużo pogrubień, wykrzykników, różnych fontów, drażniących kolorów, automatyczne pokazy slajdów, animacje, wyskakujące okienka.
+    Trzeba skupić się na najważniejszych elementach, nie damy rady zaakcentować wszystkiego.
+    </p>
+</div>
+
+      <div class="textelem">
+          <p class="bold center">Dezorganizacja</p>
+          <p>Każdy z nas zna serwisy, na których wszystko jest porozrzucane, brak wyrównania poszczególnych elementów względem strony czy kolumny. Tego nie robimy.
+    </p>
+</div>
+         <div class="textelem">
+             <p class="bold center">Przeładowanie</p>
+             <p>Zwłaszcza strony główne są często przeładowane. Efekt jest taki, że mamy mało konkretnych informacji lub są one zagłuszone. Dobra rada jest taka, by wziąć wszystko, co chcemy umieścić na stronie, a następnie pozbyć się tego, co niewiele wnosi do projektu. W czasach, gdy wszyscy się spieszymy, każdy nadmiarowy element jest po prostu zbędny.
+          </p>
+         </div>
+
+</div>
+    <h2 class="untitle" id="konwencje"> Dobre praktyki i konwencje</h2>
+    <div class="sectiontwo">
+
+        <div class="articletwo">
+    <p>Nie bójmy się tego, co już znane i uznane, nie szukajmy na siłę czegoś bardziej nowoczesnego.
+        Konwencje są przydatne i zazwyczaj słuszne.</p>
+            <p>Oto kilka z nich:</p>
+        <ul>
+            <li>elementy strony w standardowych miejscach, np. logo w lewym górnym rogu (ludzie tam go szukają),</li>
+            <li> wyróżnienie elementów klikalnych,</li>
+            <li>symbol domu = powrót na stronę główną,</li>
+            <li>hamburger = menu rozwijalne.</li>
+
+        </ul>
+        </div>
+        <img class="photo" id="hamburger" src="{{ asset('images/hamburger.png') }}" alt=""/>
+    </div>
+    <h2 class="untitle" id="przegladanie">Ułatwione przeglądanie</h2>
+    <div class="section">
+
+        <div class="article">
+            <p>
+            Opracuj treści tak, by ułatwiały szybkie przeglądanie.
+            Większość czasu spędzanego na stronach WWW użytkownicy poświęcają na przeglądanie teksu w celu znalezienia konkretnej informacji.
+            Sposób formatowania tekstu zdecydowanie to ułatwia.
+            </p>
+        </div>
+        <div class="articletwo">
+            <h3 class="center">Nagłówki</h3>
+            <p>
+                Przemyślane nagłówki, dobrze rozmieszczone w tekście działają jak spis treści.
+                Informują odbiorcę o treści poszczególnych akapitów, zachęcają do czytania. Przede wszystkim ułatwiają podjęcie decyzji, czy dany fragment warto przeczytać.
+            </p>
+
+        </div>
+
+        <div class="columns">
+            <img class="photo"    src="{{ asset('images/zle.png') }}" alt=""/>
+            <img class="photo"    src="{{ asset('images/dobrze.png') }}" alt=""/>
+        </div>
+
+
+        <div class="articletwo">
+            <h3 class="center">Śródtytuły</h3>
+            <p>
+                Pamiętaj o śródtytułach, jeśli używasz stopniowania nagłówków, opracuj je tak, by nie można było ich pomylić. Osiągniesz to powiększając proporcjonalnie tekst w zależności od stopnia nagłówka.  Zadbaj także o to, by nagłówki nie pływały w tekście, powinny znajdować się bliżej akapitu, który poprzedzają, niż tego, po którym następują.
+            </p>
+        </div>
+        <img class="photo"    src="{{ asset('images/naglowek.png') }}" alt=""/>
+        <div class="articletwo">
+            <h3 class="center">Długość akapitów</h3>
+            <p>
+                Pamiętaj o ograniczeniu długości akapitów, to nie książka, żeby użytkownik napotykał podczas przeglądania ścianę tekstu. Długie akapity są przytłaczające, utrudniają użytkownikowi czytanie i zmniejszają przejrzystość strony. Czasem w postaci akapitu dobrze jest wyodrębnić nawet pojedyncze zdanie.
+                Zawsze widząc długi akapit, staraj się podzielić go chociaż na dwie części.
+
+            </p>
+        </div>
+        <div class="articletwo">
+            <h3 class="center">Listy</h3>
+            <p>
+                Prawie wszystko, co da się przedstawić w postaci listy, najlepiej będzie tak właśnie opracować. Przy pisaniu tekstu przejrzyj go i zobacz, czy nie znajdują się w nim fragmenty, które można przerobić w ten sposób.
+            </p>
+
+        </div>
+        <img class="photo"    src="{{ asset('images/lista.png') }}" alt=""/>
+        <div class="articletwo">
+            <h3 class="center">Ważne pojęcia</h3>
+            <p>
+                Pamiętaj o wyróżnieniu ważnych pojęć, użytkownicy Internetu szukają słów kluczowych. Pogrubienie najważniejszych haseł ułatwia ich znalezienie. <p>Jednak nie przesadź z wyróżnianiem, bo da to odwrotny efekt. Oczywiście linki/elementy klikalne powinny być ostylowane w ten sam sposób, by łatwiej je zidentyfikować.</p>
+            </p>
+        </div>
+        <img class="photo"    src="{{ asset('images/informacje.png') }}" alt=""/>
+    </div>
+        <h2 class="untitle" id="formularze">Projektowanie formularzy</h2>
+    <div class="section">
+
+        <div class="article">
+        <p class="bold center">Nikt nie lubi wypełniać formularzy!</p>
+          <p class="center">Najważniejsze zasady:</p>
+
+            <ol class="centeredlist">
+                <li>Wyrzucenie zbędnych pól, te które są wymagane zaznaczyć gwiazdką.</li>
+                <li> Układ pól formularzy, czytelność poszczególnych pól.</li>
+                <li>Obsługa błędów, błędy powinny być dokładnie wyjaśnione, prostym językiem, z instrukcją, co robić, by je naprawić.</li>
+                <li>Ludzie stresują się przy wypełnianiu formularzy, nie powinno się więc używać koloru czerwonego i wykrzykników przy błędach, czerwony kolor jeszcze bardziej stresuje, najlepiej użyć koloru pomarańczowego.</li>
+                <li> Guziki powinny być równo pod formularzem, nie gdzieś po boku, bo rozprasza to uwagę.</li>
+                <li> Formatowanie danych, każde pole powinno być odpowiednio sformatowane, np. pole na  numer telefonu powinno oczekiwać od nas podania 9 cyfr.</li>
+
+            </ol>
+
+        </div>
+
+        </div>
+        <div class="columns">
+            <img class="photo"  id="form"   src="{{ asset('images/form1.png') }}" alt=""/>
+            <img class="photo"  id="form"  src="{{ asset('images/form2.png') }}" alt=""/>
+        </div>
+    <h2 class="untitle" id="nawigacja">Nawigacja</h2>
+<div class="sectiontwo">
+
+    <div class="articletwo">
+        <p>
+            Na telefonie zazwyczaj wygląda to tak: logo po lewej stronie, po prawej/lewej hamburger, czyli nawigacja globalna, powtarzająca się na wszystkich podstronach.
+        </p>
+        <p>
+            Na większym ekranie mamy więcej możliwości.
+        </p>
+
+
+
+
+    </div>
+
+            <img class="photo"   id="nawigacja"  src="{{ asset('images/globalna.png') }}" alt=""/>
+
+</div>
+
+    <div class="section">
+        <div class="article">
+            <h3 class="center">Breadcrumbsy(nawigacja okruszkowa)</h3>
+            <p> Okruszkowa nawigacja jest nam potrzebna, gdy mamy wiele podstron, żeby ułatwić użytkownikowi wyjście z labiryntu.</p>
+
+
+
+    </div>
+        <img class="photo" id="nawigacja"  src="{{ asset('images/okruszkowa.png') }}" alt=""/>
+        <div class="article">
+        <h3 class="center">Etykiety</h3>
+        <p> Etykiety z nazwami podstron muszą być zgodne z tym, co klikamy lub jak najbardziej do tego zbliżone.</p>
+        <h3 class="center">Jesteś tutaj</h3>
+        <p> Jednym ze sposobów, dzięki którym nawigacja może pomóc w zmniejszeniu naturalnego w internecie poczucia zagubienia w przestrzeni, jest wyróżnienie aktualnego położenia na stronie. Tak, jak robi to znak „Jesteś tutaj” na mapie supermarketu czy parku narodowego.
+        </p>
+        </div>
+</div>
+    <h2 class="untitle" id="podstrony">Projektowanie podstron</h2>
+    <div class="section">
+        <div class="article">
+        <h3 class="center">Strona z detalem</h3>
+        <p>Najlepiej zacząć projektowanie od strony z detalem, prościej mówiąc, od tej, która znajduje się najgłębiej w naszym serwisie. To ona wyrysowuje wygląd całej wiryny.</p>
+        <h3 class="center">Strony zbiorcze</h3>
+        <p>
+        Na stronach z wieloma elementami powinna znaleźć się lista lub paginacja (podział treści na kilka mniejszych paczek), by strona szybciej się ładowała. Ludzie są niecierpliwi i opuszczaja strony, które nie ładują się w opowiednim tempie.
+            Filtrowanie na takiej stronie powinno na telefonie być zwinięte, na desktopie może być całkiem rozwinięte, bo jest na to miejsce na ekranie.
+        </p>
+            <h3 class="center">Strona główna</h3>
+            <p>
+
+                Powinna być projektowana na końcu, nigdy na początku.
+                Gdy wszystkie podstrony zostały zaprojektowane wcześniej, to stronę główną projektuje się nam dużo łatwiej i wygodniej.
+                Logo, nagłówek, linki do mediów społecznościowych (jeżeli takie są) powinny znaleźć się na stronie głównej.
+                Ze strony głównej dostajemy się do większości podstron, są to części, które zaprojektowaliśmy wcześniej, więc tak naprawdę można powiedzieć, że strona zaprojektowała się sama.
+            </p>
+        </div>
+    </div>
+    <h2 class="untitle" id="wytyczne"> Zbiór wytycznych</h2>
+    <div class="sectiontwo">
+<div class="articletwo">
+
+   <p>Google stworzył bardzo przydatny zbiór wytycznych dla projektantów i  grafików.
+
+   </p>
+
+    <p>Stronę możemy uznać za przepis na to, jak być dobrym projektantem.</p>
+    <p>Dowiemy się tam m.in o:</p>
+    <ul>
+        <li> minimalnych wielkościach fontów,</li>
+        <li> o rodzajach fontów, które będą najkorzystniejsze,</li>
+        <li> w jaki sposób formułować komunikaty na stronach,</li>
+        <li> jak dobierać kolory.</li>
+
+    </ul>
+    <p>We wszystkim ważną rolę odgrywa też psychologia, z badań wynika, że mężczyźni wolą nasycone barwy, kobiety mniej.
+        Kobiety jasne odcienie, mężczyźni ciemniejsze. Mężczyznom odpowiadają także odcienie szarości.</p>
+
+</div>
+        <div class="articletwo">
+            <p>Zbiór wytycznych dotyczących projektowania stron od Google.</p>
+           <p class="center"> <a href="https://material.io/">material.io</a></p>
+            <img class="photo" id="paleta" src="{{ asset('images/paleta.png') }}" alt=""/>
+        </div>
+
+
+    </div>
+<h2 class="untitle" id="testy">Testy zaprojektowanej strony</h2>
+    <div class="section">
+        <div class="article">
+            <p>Jak testujemy zaprojektowaną stronę?</p>
+            Witrynę przygotowaną do testów możemy przekazać:
+            <ul>
+                <li>użytkownikowi,</li>
+                <li>ekspertowi wcielajacemu się w rolę użytkownika,</li>
+                <li>możemy skorzystać z checklisty, dzięki której sprawdzimy, czy strona spełnia wszystkie wytyczne.</li>
+            </ul>
+            <p>Najczęściej przeprowadza się testy AB, to badania, które pozwalają, np. ocenić dwa warianty strony. Można przetestować praktycznie każdy element, poprzez jego odmienne wersje w wariancie A i B.
+               <p> Aby przeprowadzić takie testy, musisz podzielić testujących na dwie części, jedna z nich otrzyma wersję A serwisu, natomiast druga wersję B.
+                Po zakończeniu testów należy sprawdzić, która z nich sprawdziła się lepiej, przyniosła bardziej pożądane reakcje od testujących.</p>
+            <p>Testy z użytkownikami dają najlepsze rozwiązania i pokazują, co ewentualnie można jeszcze poprawić.
+                Czasem wystarczy kilka osób, by wyeliminować 90% błędów.</p>
+            </p>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

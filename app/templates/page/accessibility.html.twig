@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/accessibility.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ce01bab2aa.js"></script>
+{% endblock %}
+{% block body %}
+    <h1 class="h1">Udogodnienia i dostępność</h1>
+    <h2 class="untitle">Dostępność</h2>
+    <div class="accessibility">
+<div class="section">
+    <div class="article">
+       <p>Bardzo ważne pojęcie, jednak często pomijane.
+        To stopień w jakim dany produkt może być używany przez możliwie największą grupę ludzi.
+       </p>
+
+    <p>Dokonując szybkiego podziału, możemy wyróżnić kilka grup, dla których serwis powinien być jednakowo dostępny: </p>
+        <ul>
+            <li>młodzież/osoby aktywne zawodowo,</li>
+            <li>osoby starsze,</li>
+            <li>niedowidzący/niewidomi,</li>
+            <li>daltoniści.</li>
+        </ul>
+    <p>Nie możemy także zapomnieć o mniej popularnych przeglądarkach, których użytkownicy też powinni mieć pełen dostęp do serwisu.</p>
+        <p>Młodzież/osoby aktywnie zawodowo to zwolennicy przeglądania stron mobilnych, trzeba więc pamietać o optymalizacji wersji dla smartfonów, a najlepiej zaprojektować ją jako pierwszą.
+        <p>Osoby starsze, o których często się zapomina, są coraz bardziej aktywne w internecie, więc strony powinny być dla nich dostosowane. Podobnie jak dla osób słabowidzących lub niewidomych.</p>
+           <p> Jeśli chodzi o daltonistów, to wystarczy poszperać w Google i można znaleźć strony, na których sprawdzimy, jak oni widzą naszą witrynę.
+
+        </p>
+    </div>
+</div>
+    <h3 class="center">Powiększanie tekstu</h3>
+    <div class="sectiontwo">
+        <div class="articletwo">
+           <p> Autor serwisu internetowego powinien umożliwić odbiorcom zmianę rozmiaru jej elementów.
+            Każda strona powinna pozwalać na conajmniej dwukrotne zmiejszenie i powiększenie tekstu. Można zezwolić także na większe powiększenia, ale trzeba liczyć się z tym, że zawartość strony nie będzie wyglądać idealnie.
+           </p>
+        </div>
+        <img class="photo"   src="{{ asset('images/zoom.png') }}" alt=""/>
+    </div>
+    <h3 class="center">Tekst alternatywny</h3>
+    <div class="section">
+        <div class="article">
+           <p> Każdy obrazek umieszczony na stronie powinien zawierać atrybut alt, czyli tekst alternatywny. Użycie tego atrybutu jest ważne, ponieważ, gdy obrazek się nie załaduje, użytkownik otrzyma wiadomość, co się na nim znajdowało.</p>
+            <p> Teksty alterntywne są też ważne dla osób korzystających z czytnika strony internetowej, dzięki użyciu alt osoba ta usłyszy opis tego, co normalnie widziałaby na stronie.</p>
+               <p> Jest jeden wyjątek w stosowaniu atrybutu alt, nie uzupełniamy go wtedy, gdy obrazek/zdjęcie pełni funkcję czysto dekoracyjną. W tym wypadku powinien on wyglądać tak: alt="". Dla osób z czytnikiem jest to sygnał, że w tym miejscu znajduje się grafika, lecz nie wpływa na całościowy odbiór strony.
+           </p>
+        </div>
+        <img class="photo"   src="{{ asset('images/zyrafa.png') }}" alt=""/>
+    </div>
+
+
+    <h3 class="center">Klawiatura</h3>
+    <div class="section">
+        <div class="article">
+            <p>Pamiętaj o zapewnieniu dostępu do całej zawartości strony za pomocą klawiatury. Nie każdy może kozystać z myszy.</p>
+            <p>W takim porusznaiu pomaga odpowiednie dostosowanie selektora focus w CSS.</p>
+        </div>
+
+    </div>
+        <h3 class="center">Kontrast</h3>
+        <div class="sectiontwo">
+            <img class="photo"   src="{{ asset('images/kontrast.png') }}" alt=""/>
+            <div class="articletwo">
+                <p>Zadbaj o zapewnienie odpowiedniego kontrastu między tekstem a tłem. Nie używaj kolorów, które w połączeniu ze sobą dają bardzo niski współczynnik kontrastu.</p>
+                <p>Test kontrastu możesz wykonać na wielu stronach, np.: <a href="https://webaim.org/resources/contrastchecker/">webaim.org</a></p>
+            </div>
+
+        </div>
+    <h3 class="center">Nagłówki</h3>
+    <div class="section">
+        <div class="article">
+        <p>Bardzo ważne jest również stosowanie odpowiednich nagłówków HTML. </p>
+            <p>Standardowe nagłówki HTML to cenną informację o strukturze logicznej treści, ułatwia to korzystanie
+            ze strony osobom posługującym się czytnikiem ekranu, choćby dzięki ułatwieniu nawigacji za pomocą klawiatury.
+                Używaj elementu h1 w odniesieniu do tytułu strony lub nagłówka dotyczącego głównej treści;
+                elementu h2 do nagłówków drugiego stopnia, h3 dla nagłówków pomocniczych i tak dalej. </p>
+           <p>Wygląd poszczególnych nagłówków modyfikuj za pomocą CSS.</p>
+
+        </div>
+
+    </div>
+
+    <h3 class="center">Formularze</h3>
+    <div class="section">
+        <div class="article">
+            <p>Przystosuj formularze do pracy z czytnikami ekranu. </p>
+            <p>Najlepiej sprawdzi się do tego jeden z elementów HTML "label", którego zadaniem będzie kojarzenie pól z ich opisami.
+            Dzięki temu osoby niepełnosprawne będą wiedzieć, co mają wpisać w kolejne pola formularza.
+            </p>
+        </div>
+        <img class="photo"   src="{{ asset('images/formularz.png') }}" alt=""/>
+    </div>
+    </div>
+{% endblock %}

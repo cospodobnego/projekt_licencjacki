@@ -1,0 +1,248 @@
+.h1{
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    background: url(../images/etapy.png) no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    position: relative;
+    padding: 2em 2em;
+    font-size: 60px;
+    letter-spacing: 1.2rem;
+    color: #fcf9f9;
+    text-shadow: 0 0 0.2em #2c4b10, 0 0 0.2em #2c4b10
+
+
+}
+.h1:hover{
+    opacity: 0.7;
+}
+.untitle {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    padding: 4em 0 1em;
+}
+
+.sectionone{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-bottom: 1.5em;
+
+}
+.nolist{
+    text-align: center;
+    list-style: none;
+    font-weight: bold;
+    padding: 0.2em 2em 0.5em 2em;
+}
+.sectionone p{
+    margin-bottom: 0;
+}
+.articletwo p{
+    margin-bottom: 0;
+}
+.article p{
+    margin-bottom: 0;
+
+}
+.sectiontwo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-bottom: 1.5em;
+}
+.photo{
+width: 40%;
+
+height: auto;
+object-fit: cover;
+border-radius: 20%;
+padding: 1em;
+;}
+.photo:hover{
+
+    opacity: 0.7;
+}
+#mobile{
+    width: 200px;
+    height: 300px;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#podzialimg{
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    padding: 1em;
+}
+
+.article{
+
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    width: 80%;
+
+}
+.articletwo{
+    padding: 1em;
+    margin: 0;
+    font-size: 20px;
+    width: 60%;
+}
+.textelem{
+    width: 30% ;
+    padding: 0.5em;
+    font-size: 20px;
+}
+.bold{
+    font-weight: bold;
+}
+.sectionthree{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0 6em;
+}
+.center{
+    padding-top: 0.5em;
+    text-align: center;
+}
+#hamburger{
+    width: 270px;
+    height: auto;
+}
+#form{
+    width: auto;
+    height: 450px;
+}
+.columns{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.centeredlist{
+  padding: 0 6em;
+}
+#nawigacja{
+    width: auto;
+    height: 300px;
+}
+#paleta{
+    width: 100%;
+    height: auto;
+
+}
+.articletwo  a{
+    text-decoration: none;
+    color: #B65E42
+
+}
+.articletwo a:visited{
+    color: #801f1f;
+}
+.articletwo a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.stages{
+    padding-bottom: 2em;
+}
+.mininavigation ul{
+margin:0;
+padding:0;
+list-style: none;}
+.mininavigation a{
+    text-decoration:none;
+    display:block;
+    color:black;
+    padding:10px 15px;
+    background:transparent;
+    transition:0.2s;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px 10px 10px 10px;
+}
+.mininavigation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.mininavigation li:hover > a{
+    background: #ac705e;
+    color:white;
+}
+
+@media (max-width:870px) and (min-width:751px ) {
+    .stages .h1{
+        letter-spacing: 0;}
+}
+@media(max-width: 750px){
+    .stages .h1{
+        letter-spacing: 0;
+        font-size: 28px;
+    }
+}
+@media(max-width: 599px){
+    .sectiontwo{
+        align-items: center;
+        flex-direction: column;
+    }
+    .articletwo{
+        width: 100%;
+    }
+    .centeredlist {
+        padding: 0;
+    }
+    .photo{
+        width: 100%;
+    }
+    #mobile {
+        width: 60%;
+    }
+    #podzialimg{
+        width: 100%;
+
+    }
+
+    .article{
+        width: 90%;
+    }
+    .columns{
+        flex-direction: column;
+    }
+    #formularze{
+        padding: 4em 0.2em 1em;
+    }
+    #nawigacja{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width: 800px){
+    .textelem {
+        width: 90%;}
+    .sectionthree{
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+}

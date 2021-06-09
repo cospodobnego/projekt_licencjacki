@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+{% block stylesheets %}
+ {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ce01bab2aa.js"></script>
+{% endblock %}
+{% block body %}
+    <h1 class="h1">
+       Informacje o serwisie
+    </h1>
+    <h2>Czym jest ta strona?</h2>
+    <div class="about">
+
+
+        <div class="aboutcontent">
+        <p>Autorem niniejszego serwisu jest Mariola Podoba.</p>
+        Serwis ten stanowi integralną część pracy licencjackiej (kierunek: Elektroniczne Przetwarzanie Informacji), przygotowanej pod kierunkiem prof. dra. hab. Jerzego Koniora, na Wydziale Zarządzania i Komunikacji Społecznej Uniwersytetu Jagiellońskiego.
+    </div>
+    </div>
+    <div class="sources">
+        <h2>Źródła informacji</h2>
+        <div class="aboutcontent2">
+            <p>Autorskie grafiki zostały wykonane w programach CorelDRAW, Inkscape lub Canva.</p>
+        <p>Wszystkie nieautorskie zdjęcia i obrazki umieszczone na stronie pochodzą z darmowych banków zdjęć, są wykorzystane legalnie i nie wymagają oznaczania. Załączam mimo wszystko bezpośrednie linki do obrazków.</p>
+        <h3>Strona główna</h3>
+        <ul>
+            <h4>Obrazek w tle:</h4>
+            <li> <a href='https://www.pexels.com/th-th/photo/733852/ '>pexels</a></li>
+            <h4>Obrazki pomiędzy tekstem:</h4>
+            <li> <a href='https://pixabay.com/ja/illustrations/意思決定-脳-中心部-心-4083469/'>pixabay </a></li>
+            <li> <a href='https://it.freepik.com/vettori-gratuito/video-tutorial-di-progettazione-grafica-corso-di-arte-tradizionale-su-internet-masterclass-online-di-pittore-corso-di-web-designer-a-distanza-pittura-e-learning-educazione_12083109.htm'>freepik</a></li>
+            <li> <a href='https://www.pexels.com/photo/hands-of-people-reaching-to-each-other-5541019/'>pexels</a></li>
+            <li> <a href='https://www.freepik.es/vector-gratis/ilustracion-concepto-proceso-diseno_13662975.htm#page=1&query=idea%20diseno&position=23 -'>freepik</a></li>
+            <li> <a href='https://pixabay.com/pl/illustrations/widma-koloru-ko%C5%82o-1192509/'>freepik</a></li>
+
+
+
+        </ul>
+        </div>
+    </div>
+{% endblock %}

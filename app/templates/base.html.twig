@@ -1,47 +1,88 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}UX DESIGN{% endblock %}</title>
     {% block stylesheets %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/base.css') }}">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-        <script src="https://use.fontawesome.com/ce01bab2aa.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
     {% endblock %}
+    <div class="backgroundbox">
+
+        <span class="resize">
+    <a class="increase"> <i class="fas fa-search-plus"></i></a>
+            <a class="reset"><i class="fas fa-search"></i></a>
+  <a class="decrease"><i class="fas fa-search-minus"></i></a>
+
+    </span>
     <div class="anim">
 
 
 
 
         <div class="title">
-
+            <a id="homepage" href="{{ url('homepage') }}">
         <h1>jak projektować <h2 class="title2">strony internetowe</h2></h1>
+            </a>
+    </div>
+
+        <img class="kwadrat" src="{{ asset('images/kwadratux.png') }}" alt="kwadrat ozdoba"/>
 
     </div>
-        <img id="kwadrat" src="{{ asset('images/kwadratux.png') }}" alt="kwadrat ozdoba"/>
 
     </div>
-    <nav >
-    {% block nav %}
 
-        <ul>
-            <li><a id="link1" href="{{ url('homepage') }}">Strona główna</a></li>
-            <li><a id="link2" href="#">Etapy </a></li>
-            <li><a id="link3" href="#">Udogodnienia</a></li>
-            <li><a id="link4" href="#">O serwisie</a></li>
-            <li><a id="link5" href="{{ url('quiz') }}">Quiz</a></li>
 
-        </ul>
 
-    {% endblock %}
+    <nav class="navi"  >
+        {% block nav %}
+
+            <ul>
+                <li><a class="nav1"  href="{{ url('homepage') }}" >Strona główna</a></li>
+                <li><a class="nav1" href="{{ url('stages') }}">Projektowanie</a></li>
+                <li><a class="nav1" href="{{ url('accessibility') }}">Udogodnienia</a></li>
+                <li><a class="nav1" href="{{ url('about') }}">O serwisie</a></li>
+                <li><a  class="nav1" href="{{ url('quiz') }}">Quiz</a></li>
+
+            </ul>
+
+
     </nav>
+
+    <div id="menuToggle">
+    <nav class="mobile" >
+
+
+
+                <input  type="checkbox" />
+
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+
+                <ul id="menu">
+                    <li><a id="link1" href="{{ url('homepage') }}">Strona główna</a></li>
+                    <li><a id="link2" href="{{ url('stages') }}">Etapy </a></li>
+                    <li><a id="link3" href="{{ url('accessibility') }}">Udogodnienia</a></li>
+                    <li><a id="link4" href="{{ url('about') }}">O serwisie</a></li>
+                    <li><a id="link5" href="{{ url('quiz') }}">Quiz</a></li>
+
+                </ul>
+
+            {% endblock %}
+
+
+    </nav>
+    </div>
 </head>
 
 <body>
-
+<div class="main">
 
 {% block body %}
 
@@ -49,14 +90,20 @@
 {% endblock %}
 
 {% block javascripts %}
+
+</div>
     <script src={{ asset('jquery-3.3.1.min.js') }}></script>
     <script src={{ asset('jquery.scrollTo.min.js') }}></script>
-{#    <script src=https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>#}
+    <script src={{ asset('main.js') }}></script>
+    <script src={{ asset('text.js') }}></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 {% endblock %}
 
+</div>
+<footer>
+    <p> Copyright &copy; 2021 by Mariola Podoba. Wszystkie prawa zastrzeżone.</p>
 
-
+</footer>
 </body>
 </html>

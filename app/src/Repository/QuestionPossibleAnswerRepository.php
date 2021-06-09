@@ -2,8 +2,10 @@
 
 namespace App\Repository;
 
+use App\Entity\Question;
 use App\Entity\QuestionPossibleAnswer;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -17,6 +19,37 @@ class QuestionPossibleAnswerRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, QuestionPossibleAnswer::class);
+    }
+    public function save(QuestionPossibleAnswer $questionPossibleAnswer)
+    {
+        $this->_em->persist($questionPossibleAnswer);
+        $this->_em->flush($questionPossibleAnswer);
+    }
+
+    public function queryAll():QueryBuilder
+    {
+        return $this->getOrCreateQueryBuilder()
+            ->select(
+                'question_possible_answer',
+                'partial question.{id}'
+            )
+            ->innerJoin('question_possible_answer.question', 'question');
+    }
+
+    public function queryByQuestion(Question $question): QueryBuilder
+    {
+        $queryBuilder = $this->queryAll();
+        $queryBuilder->andWhere('question_possible_answer.question = :question')
+            ->setParameter('question', $question);
+//        return $this->getOrCreateQueryBuilder()
+//            ->andWhere('question_possible_answer.question = :question')
+//            ->setParameter('question', $question);
+    }
+
+
+    public function getOrCreateQueryBuilder(QueryBuilder $queryBuilder = null): QueryBuilder
+    {
+        return $queryBuilder ?? $this->createQueryBuilder('question_possible_answer');
     }
 
     // /**
